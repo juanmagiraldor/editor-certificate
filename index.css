@@ -10,6 +10,15 @@
     margin: 1rem;
   }
 }
+.image-tool__image {
+  width: 100px;
+  height: 100px;
+  border: none;
+}
+
+.cdx-input.image-tool__caption {
+  display: none;
+}
 
 button {
   cursor: pointer;

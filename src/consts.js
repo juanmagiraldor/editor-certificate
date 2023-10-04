@@ -1,5 +1,5 @@
 export const DEFAULT_EDITOR_DATA = {
-  time: 1696457447517,
+  time: 1696459967608,
   blocks: [
     {
       id: "LDxJExmOcI",
@@ -92,6 +92,17 @@ export const DEFAULT_EDITOR_DATA = {
       tunes: { anyTuneName: { alignment: "left" } },
     },
     {
+      id: "xqCyNLT8Wr",
+      type: "image",
+      data: {
+        file: { url: "https://editorjs.io/_nuxt/logo.d2a59c1c.svg" },
+        caption: "",
+        withBorder: false,
+        stretched: false,
+        withBackground: false,
+      },
+    },
+    {
       id: "mJ4yxaMuKo",
       type: "paragraph",
       data: { text: "Luz María Quintero L." },
@@ -106,7 +117,9 @@ export const DEFAULT_EDITOR_DATA = {
     {
       id: "2XIcqVISk7",
       type: "paragraph",
-      data: { text: "info@kommit.co" },
+      data: {
+        text: '<font style="color: rgb(24, 10, 214);">info@kommit.co</font>',
+      },
       tunes: { anyTuneName: { alignment: "center" } },
     },
     {
@@ -120,18 +133,6 @@ export const DEFAULT_EDITOR_DATA = {
       type: "paragraph",
       data: { text: " Cel +57 310 398 1206" },
       tunes: { anyTuneName: { alignment: "center" } },
-    },
-    {
-      type: 'image',
-      data: {
-        file: {
-          url: 'https://editorjs.io/_nuxt/logo.d2a59c1c.svg',
-        },
-        caption: '',
-        withBorder: true,
-        stretched: false,
-        withBackground: false,
-      },
     },
   ],
   version: "2.27.2",

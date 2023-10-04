@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../simple-image"
+		},
+		{
+			"path": "../editorjs-undo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "editor-web"
+	}
+}

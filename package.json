@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@editorjs/embed": "^2.4.6",
+    "@editorjs/image": "^2.8.1",
     "editorjs-break-line": "^0.1.0",
     "editorjs-drag-drop": "^1.0.0",
     "editorjs-inline-image": "^0.1.4",

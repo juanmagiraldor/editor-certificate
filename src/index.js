@@ -4,6 +4,7 @@ import List from "@editorjs/list";
 import Embed from "@editorjs/embed";
 import Paragraph from "@editorjs/paragraph";
 import Undo from "editorjs-undo";
+import Image from "@editorjs/image";
 import AlignmentTuneTool from "editorjs-text-alignment-blocktune";
 import { DEFAULT_EDITOR_DATA } from "./consts";
 
@@ -52,6 +53,9 @@ const editor = new EditorJS({
         },
       },
     },
+    image: {
+      class: Image,
+    }
   },
   data: DEFAULT_EDITOR_DATA,
   onReady: () => {

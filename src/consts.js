@@ -121,6 +121,18 @@ export const DEFAULT_EDITOR_DATA = {
       data: { text: " Cel +57 310 398 1206" },
       tunes: { anyTuneName: { alignment: "center" } },
     },
+    {
+      type: 'image',
+      data: {
+        file: {
+          url: 'https://editorjs.io/_nuxt/logo.d2a59c1c.svg',
+        },
+        caption: '',
+        withBorder: true,
+        stretched: false,
+        withBackground: false,
+      },
+    },
   ],
   version: "2.27.2",
 };

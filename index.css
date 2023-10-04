@@ -2,6 +2,15 @@
   padding-bottom: 100px !important;
 }
 
+@media print {
+  @page {
+    margin: 0;
+  }
+  body {
+    margin: 1rem;
+  }
+}
+
 button {
   cursor: pointer;
   outline: 0;

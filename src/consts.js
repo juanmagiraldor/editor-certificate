@@ -1,6 +1,19 @@
 export const DEFAULT_EDITOR_DATA = {
-  time: 1696510552880,
+  time: 1696544236413,
   blocks: [
+    {
+      id: "header",
+      type: "image",
+      data: {
+        file: {
+          url: "https://editor-testing-images.s3.us-east-2.amazonaws.com/logo-azul.svg",
+        },
+        caption: "",
+        withBorder: false,
+        stretched: false,
+        withBackground: false,
+      },
+    },
     {
       id: "LDxJExmOcI",
       type: "paragraph",
@@ -8,25 +21,27 @@ export const DEFAULT_EDITOR_DATA = {
       tunes: { anyTuneName: { alignment: "left" } },
     },
     {
-      id: "jsSayDA-Jy",
-      type: "paragraph",
-      data: { text: "Boynton Beach, State of Florida, USA. " },
-      tunes: { anyTuneName: { alignment: "left" } },
+      id: "hZg4Fmlu0S",
+      type: "table",
+      data: {
+        withHeadings: false,
+        content: [
+          [
+            '<span style="font-size: medium; text-align: left;">Boynton Beach, State of Florida, USA.</span>',
+            '<span style="font-size: medium; text-align: left;">Abril 19 de 2023</span>',
+          ],
+        ],
+      },
+      tunes: { anyTuneName: { alignment: "center" } },
     },
-    {
-      id: "ErPKp5hJk8",
-      type: "paragraph",
-      data: { text: "Abril 19 de 2023" },
-      tunes: { anyTuneName: { alignment: "left" } },
-    },
-    { id: "sNfheImRY_", type: "breakLine", data: { divider: false } },
+    { id: "vD9sLrk4g6", type: "breakLine", data: { divider: false } },
     {
       id: "LL36Ax8THP",
       type: "paragraph",
       data: { text: "HACE CONSTAR:" },
       tunes: { anyTuneName: { alignment: "center" } },
     },
-    { id: "qnqFLpRfD6", type: "breakLine", data: { divider: false } },
+    { id: "vD9sLrk4g6", type: "breakLine", data: { divider: false } },
     {
       id: "x-yy1aF1AP",
       type: "paragraph",
@@ -94,13 +109,14 @@ export const DEFAULT_EDITOR_DATA = {
       },
       tunes: { anyTuneName: { alignment: "left" } },
     },
-    { id: "HX3sSQ4bvG", type: "breakLine", data: { divider: false } },
     { id: "8gd6bFl5QE", type: "breakLine", data: { divider: false } },
     {
       id: "xqCyNLT8Wr",
       type: "image",
       data: {
-        file: { url: "https://editorjs.io/_nuxt/logo.d2a59c1c.svg" },
+        file: {
+          url: "https://editor-testing-images.s3.us-east-2.amazonaws.com/Screenshot_20231005_160947.png",
+        },
         caption: "",
         withBorder: false,
         stretched: false,
@@ -119,7 +135,7 @@ export const DEFAULT_EDITOR_DATA = {
       data: { text: "Directora Administrativa" },
       tunes: { anyTuneName: { alignment: "left" } },
     },
-    { id: "uCklT14jTA", type: "delimiter", data: {}},
+    { id: "HikMQkVu1T", type: "breakLine", data: { divider: false } },
     {
       id: "2XIcqVISk7",
       type: "paragraph",
@@ -140,10 +156,7 @@ export const DEFAULT_EDITOR_DATA = {
       data: { text: " Cel +57 310 398 1206" },
       tunes: { anyTuneName: { alignment: "center" } },
     },
-    { id: "WO5yzO-ygd", type: "breakLine", data: { divider: false } },
-    { id: "Lzx46jqfBZ", type: "breakLine", data: { divider: false } },
-    { id: "RS2_qL7FkK", type: "breakLine", data: { divider: false } },
-    { id: "HikMQkVu1T", type: "breakLine", data: { divider: true } },
+    { id: "uCklT14jTA", type: "delimiter", data: {}},
     {
       id: "HkVDP2Qfbf",
       type: "paragraph",

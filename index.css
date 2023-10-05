@@ -4,11 +4,24 @@
 
 .ce-delimiter:before {
   content: "_________________________________________________________________________________" !important;
-  font-size: 1rem !important;
+  font-size: 0.875rem !important;
   line-height: 1rem !important;
   height: 2rem !important;
   letter-spacing: 0 !important;
   color: #a1a1aa;
+}
+
+.tc-add-row {
+  display: none !important;
+}
+
+.tc-wrap{
+  --color-border: #e8e8eb00 !important;
+}
+
+.ce-block__content {
+  font-family: sans-serif;
+  font-size: 0.875rem;
 }
 
 @media print {
@@ -25,8 +38,8 @@
 }
 
 .image-tool__image {
-  width: 100px;
-  height: 100px;
+  width: 190px;
+  height: 60px;
   border: none;
 }
 

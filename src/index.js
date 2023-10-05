@@ -8,6 +8,7 @@ import Header from "@editorjs/header";
 import Image from "@editorjs/image";
 import List from "@editorjs/list";
 import Paragraph from "@editorjs/paragraph";
+import Table from '@editorjs/table';
 import Undo from "editorjs-undo";
 import { DEFAULT_EDITOR_DATA } from "./consts";
 
@@ -26,12 +27,13 @@ const editor = new EditorJS({
     paragraph: {
       class: Paragraph,
       inlineToolbar: true,
+      preserveBlank: true,
       tunes: ["anyTuneName"],
     },
     breakLine: {
       class: BreakLine,
       inlineToolbar: true,
-      shortcut: "CMD+SHIFT+ENTER",
+      shortcut: "ENTER",
     },
     anyTuneName: {
       class: AlignmentTuneTool,
@@ -65,6 +67,16 @@ const editor = new EditorJS({
     },
     delimiter: {
       class: Delimiter,
+    },
+    table:
+    {
+      class: Table,
+      withHeadings: false,
+      inlineToolbar: true,
+      tunes: ["anyTuneName"],
+      config: {
+        rows: 1
+      }
     },
     Color: {
       class: ColorPlugin, // if load from CDN, please try: window.ColorPlugin

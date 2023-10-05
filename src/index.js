@@ -1,16 +1,16 @@
+import AlignmentTuneTool from "editorjs-text-alignment-blocktune";
+import BreakLine from "editorjs-break-line";
+import ColorPlugin from "editorjs-text-color-plugin";
 import EditorJS from "@editorjs/editorjs";
-import Header from "@editorjs/header";
-import List from "@editorjs/list";
 import Embed from "@editorjs/embed";
+import Header from "@editorjs/header";
+import Image from "@editorjs/image";
+import List from "@editorjs/list";
 import Paragraph from "@editorjs/paragraph";
 import Undo from "editorjs-undo";
-import Image from "@editorjs/image";
-import AlignmentTuneTool from "editorjs-text-alignment-blocktune";
-import ColorPlugin from "editorjs-text-color-plugin";
 
 import { DEFAULT_EDITOR_DATA } from "./consts";
 
-let undo;
 const undoConfig = {
   debounceTimer: 10,
   shortcuts: {
@@ -27,6 +27,11 @@ const editor = new EditorJS({
       class: Paragraph,
       inlineToolbar: true,
       tunes: ["anyTuneName"],
+    },
+    breakLine: {
+      class: BreakLine,
+      inlineToolbar: true,
+      shortcut: "CMD+SHIFT+ENTER",
     },
     anyTuneName: {
       class: AlignmentTuneTool,
@@ -90,29 +95,21 @@ const editor = new EditorJS({
   },
   data: DEFAULT_EDITOR_DATA,
   onReady: () => {
-    undo = new Undo({ editor, undoConfig });
+    const undo = new Undo({ editor, undoConfig });
+    const saveBtn = document.getElementById("save");
+    const printBtn = document.getElementById("print");
+    const undoButton = document.getElementById("undoButton");
+    const redoButton = document.getElementById("redoButton");
+
+    const addEventListener = (element, event, handler) => {
+      element.addEventListener(event, handler);
+    };
+
+    addEventListener(undoButton, "click", () => undo.undo());
+    addEventListener(redoButton, "click", () => undo.redo());
+    addEventListener(printBtn, "click", () => window.print());
+    addEventListener(saveBtn, "click", () =>
+      editor.save().then((savedData) => console.log(JSON.stringify(savedData)))
+    );
   },
-});
-
-const saveBtn = document.getElementById("save");
-const printBtn = document.getElementById("print");
-const undoButton = document.getElementById("undoButton");
-const redoButton = document.getElementById("redoButton");
-
-undoButton.addEventListener("click", () => {
-  undo.undo();
-});
-
-redoButton.addEventListener("click", () => {
-  undo.redo();
-});
-
-printBtn.addEventListener("click", () => {
-  window.print();
-});
-
-saveBtn.addEventListener("click", () => {
-  editor.save().then((savedData) => {
-    console.log(JSON.stringify(savedData));
-  });
 });

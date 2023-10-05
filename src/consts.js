@@ -1,5 +1,5 @@
 export const DEFAULT_EDITOR_DATA = {
-  time: 1696459967608,
+  time: 1696510552880,
   blocks: [
     {
       id: "LDxJExmOcI",
@@ -19,12 +19,14 @@ export const DEFAULT_EDITOR_DATA = {
       data: { text: "Abril 19 de 2023" },
       tunes: { anyTuneName: { alignment: "left" } },
     },
+    { id: "sNfheImRY_", type: "breakLine", data: { divider: false } },
     {
       id: "LL36Ax8THP",
       type: "paragraph",
       data: { text: "HACE CONSTAR:" },
       tunes: { anyTuneName: { alignment: "center" } },
     },
+    { id: "qnqFLpRfD6", type: "breakLine", data: { divider: false } },
     {
       id: "x-yy1aF1AP",
       type: "paragraph",
@@ -33,6 +35,7 @@ export const DEFAULT_EDITOR_DATA = {
       },
       tunes: { anyTuneName: { alignment: "left" } },
     },
+    { id: "D_LqEjzVrd", type: "breakLine", data: { divider: false } },
     {
       id: "SJ5i6usaOy",
       type: "paragraph",
@@ -87,10 +90,12 @@ export const DEFAULT_EDITOR_DATA = {
       id: "Fzm7MWSIpX",
       type: "paragraph",
       data: {
-        text: "6- Las demás actividades de desarrollo de tecnología requeridas, junto con aquellas actividades inherentesa la naturaleza del servicio prestado",
+        text: "6- Las demás actividades de desarrollo de tecnología requeridas, junto con aquellas actividades inherentesa la naturaleza del servicio prestado.",
       },
       tunes: { anyTuneName: { alignment: "left" } },
     },
+    { id: "HX3sSQ4bvG", type: "breakLine", data: { divider: false } },
+    { id: "8gd6bFl5QE", type: "breakLine", data: { divider: false } },
     {
       id: "xqCyNLT8Wr",
       type: "image",
@@ -114,6 +119,8 @@ export const DEFAULT_EDITOR_DATA = {
       data: { text: "Directora Administrativa" },
       tunes: { anyTuneName: { alignment: "left" } },
     },
+    { id: "DsXZdZ5-I-", type: "breakLine", data: { divider: false } },
+    { id: "fv6WDRHW8n", type: "breakLine", data: { divider: false } },
     {
       id: "2XIcqVISk7",
       type: "paragraph",
@@ -133,6 +140,18 @@ export const DEFAULT_EDITOR_DATA = {
       type: "paragraph",
       data: { text: " Cel +57 310 398 1206" },
       tunes: { anyTuneName: { alignment: "center" } },
+    },
+    { id: "WO5yzO-ygd", type: "breakLine", data: { divider: false } },
+    { id: "Lzx46jqfBZ", type: "breakLine", data: { divider: false } },
+    { id: "RS2_qL7FkK", type: "breakLine", data: { divider: false } },
+    { id: "HikMQkVu1T", type: "breakLine", data: { divider: true } },
+    {
+      id: "HkVDP2Qfbf",
+      type: "paragraph",
+      data: {
+        text: '<font style="color: rgb(24, 10, 214);">&nbsp;www.kommit.co – +1 (561) 903-6261 - Boynton Beach, Florida 33435</font>',
+      },
+      tunes: { anyTuneName: { alignment: "left" } },
     },
   ],
   version: "2.27.2",

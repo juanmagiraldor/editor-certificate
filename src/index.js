@@ -1,6 +1,7 @@
 import AlignmentTuneTool from "editorjs-text-alignment-blocktune";
 import BreakLine from "editorjs-break-line";
 import ColorPlugin from "editorjs-text-color-plugin";
+import Delimiter from '@editorjs/delimiter';
 import EditorJS from "@editorjs/editorjs";
 import Embed from "@editorjs/embed";
 import Header from "@editorjs/header";
@@ -8,7 +9,6 @@ import Image from "@editorjs/image";
 import List from "@editorjs/list";
 import Paragraph from "@editorjs/paragraph";
 import Undo from "editorjs-undo";
-
 import { DEFAULT_EDITOR_DATA } from "./consts";
 
 const undoConfig = {
@@ -62,6 +62,9 @@ const editor = new EditorJS({
     },
     image: {
       class: Image,
+    },
+    delimiter: {
+      class: Delimiter,
     },
     Color: {
       class: ColorPlugin, // if load from CDN, please try: window.ColorPlugin

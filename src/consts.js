@@ -119,8 +119,7 @@ export const DEFAULT_EDITOR_DATA = {
       data: { text: "Directora Administrativa" },
       tunes: { anyTuneName: { alignment: "left" } },
     },
-    { id: "DsXZdZ5-I-", type: "breakLine", data: { divider: false } },
-    { id: "fv6WDRHW8n", type: "breakLine", data: { divider: false } },
+    { id: "uCklT14jTA", type: "delimiter", data: {}},
     {
       id: "2XIcqVISk7",
       type: "paragraph",

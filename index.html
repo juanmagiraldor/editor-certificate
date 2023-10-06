@@ -7,12 +7,25 @@
   <title>Document</title>
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <input placeholder="field" id="field">
+    <button id="addField">Add field</button>
+    <button id="save">Save template</button>
+    <button id="print">Print certificate</button>
+    <button id="undoButton">Undo</button>
+    <button id="redoButton">Redo</button>
+</div>
+
+<!-- Content -->
+<div class="content">
   <div id="editorjs"></div>
-  <button id="save">Save template</button>
-  <button id="print">Print certificate</button>
-  <button id="undoButton">Undo</button>
-  <button id="redoButton">Redo</button>
+</div>
+
+  
+
   <pre id="output"></pre>
   <div id="print"></div>
   <script src="./dist/main.js"></script>

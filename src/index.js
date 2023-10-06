@@ -115,6 +115,7 @@ const editor = new EditorJS({
     const printBtn = document.getElementById("print");
     const undoButton = document.getElementById("undoButton");
     const redoButton = document.getElementById("redoButton");
+    const addFieldButton = document.getElementById("addField");
 
     const addEventListener = (element, event, handler) => {
       element.addEventListener(event, handler);
@@ -123,8 +124,53 @@ const editor = new EditorJS({
     addEventListener(undoButton, "click", () => undo.undo());
     addEventListener(redoButton, "click", () => undo.redo());
     addEventListener(printBtn, "click", () => window.print());
+
     addEventListener(saveBtn, "click", () =>
       editor.save().then((savedData) => console.log(JSON.stringify(savedData)))
     );
+
+    addEventListener(addFieldButton, "click", async () => {
+      const fieldName = document.getElementById("field").value;
+      console.log(fieldName);
+
+      const savedSelection = await editor.save().then((savedData) => savedData);
+
+      const selection = window.getSelection();
+      console.log(selection.getRangeAt(0).startOffset);
+      if (selection.rangeCount > 0) {
+        const startOffset = selection.getRangeAt(0).startOffset;
+        const actualBlock =
+          savedSelection.blocks[editor.blocks.getCurrentBlockIndex()];
+
+        actualBlock.data.text = insertTextAtOffset(
+          removeHtmlTags(actualBlock.data.text),
+          `<font style="color: rgb(0, 112, 255);">{{${fieldName}}}</font>`,
+          startOffset
+        );
+      }
+
+      editor.render(savedSelection);
+    });
   },
 });
+
+function removeHtmlTags(text) {
+  // Define a regular expression to match any HTML tags
+  var htmlTagPattern = /<\/?[^>]+(>|$)/g;
+
+  // Use the replace method to remove the matched tags
+  var newText = text.replace(htmlTagPattern, "");
+
+  return newText;
+}
+
+function insertTextAtOffset(originalString, textToInsert, offset) {
+  if (offset < 0 || offset > originalString.length) {
+    throw new Error("Invalid offset");
+  }
+
+  const firstPart = originalString.substring(0, offset);
+  const secondPart = originalString.substring(offset);
+
+  return firstPart + textToInsert + secondPart;
+}

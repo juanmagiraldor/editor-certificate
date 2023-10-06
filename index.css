@@ -69,3 +69,38 @@ button {
     border-color: #0a58ca;
   }
 }
+
+/* Style the sidebar */
+.sidebar {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  background-color: #3e3e3e;
+  color: #fff;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+/* Style the content container */
+.content {
+  margin-left: 250px; /* Width of the sidebar */
+  padding: 20px;
+}
+
+/* Style links in the sidebar */
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+
+/* Add some hover effect to the links */
+.sidebar a:hover {
+  background-color: #555;
+}

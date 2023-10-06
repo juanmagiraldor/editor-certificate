@@ -8,6 +8,7 @@
     "@editorjs/header": "^2.6.1",
     "@editorjs/list": "^1.6.2",
     "@editorjs/paragraph": "^2.8.0",
+    "@editorjs/table": "^2.2.2",
     "codex-tooltip": "^1.0.2",
     "editorjs-html": "^3.4.3",
     "editorjs-text-alignment-blocktune": "^1.0.3",
@@ -19,6 +20,7 @@
     "webpack-cli": "^4.8.0"
   },
   "devDependencies": {
+    "@editorjs/delimiter": "^1.3.0",
     "@editorjs/embed": "^2.4.6",
     "@editorjs/image": "^2.8.1",
     "editorjs-break-line": "^0.1.0",
